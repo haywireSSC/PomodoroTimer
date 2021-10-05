@@ -50,7 +50,9 @@ function preload() {
   ]
   f = loadFont('TypoGraphica_demo.otf');
   sound = loadSound('game-radar-ping-SBA-300420147-preview.wav');
+  tick = createAudio('clock-ticking-2.wav');
   colours = random(palettes);
+  tick.loop();
 }
 
 function setup() {
