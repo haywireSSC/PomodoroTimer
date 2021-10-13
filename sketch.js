@@ -53,6 +53,7 @@ function preload() {
   tick = createAudio('clock-ticking-2.wav');
   colours = random(palettes);
   tick.loop();
+  
 }
 
 function setup() {
@@ -86,7 +87,7 @@ function draw() {
     }
     start = millis();
   }
-  amount = map(0-millis()-start, 0, maxTime, 0, 180);
+  amount = map(maxTime-(millis()-start), 0, maxTime, 0, 180);
 
   background(colours[2]);
   noFill();
